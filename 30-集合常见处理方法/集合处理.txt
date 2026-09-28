@@ -1,0 +1,27 @@
+val nums = listOf(1, 2, 3, 4, 5)
+val users = listOf(User("Alice", 25), User("Bob", 17), User("Charlie", 30))
+
+// 1. filter —— 筛选
+nums.filter { it % 2 == 0 }              // [2, 4]
+
+// 2. map —— 转换
+nums.map { it * 2 }                      // [2, 4, 6, 8, 10]
+
+// 3. forEach —— 遍历
+nums.forEach { println(it) }             // 逐个打印
+
+// 4. find —— 查找
+users.find { it.age < 18 }               // User(Bob, 17)
+
+// 5. sum —— 求和
+nums.sum()                               // 15
+users.sumOf { it.age }                   // 72
+
+// 6. sortedBy —— 排序
+users.sortedBy { it.age }                // 按年龄从小到大
+
+// 7. groupBy —— 分组
+nums.groupBy { it % 2 }                  // {1=[1,3,5], 0=[2,4]}
+
+// 8. joinToString —— 拼接
+nums.joinToString(", ")                  // "1, 2, 3, 4, 5"
