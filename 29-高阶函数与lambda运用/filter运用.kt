@@ -3,3 +3,4 @@ fun main(){
     val b = a.filter { it < 25 }
     println(b)
 }
+//filter 的核心功能就是筛选,可以进行逻辑判断
